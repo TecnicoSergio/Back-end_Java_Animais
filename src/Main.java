@@ -1,4 +1,6 @@
 import Animais.Cachorro;
+import Animais.Gato;
+import Animais.Passaro;
 
 public class Main {
 
@@ -7,6 +9,8 @@ public class Main {
 
         Cachorro cachorro1 = new Cachorro();
         Cachorro cachorro2 = new Cachorro("Pet", "Preto", 10, 9.8, 5);
+        Gato gato1 = new Gato( "file", "branco", 5, 2.2);
+        Passaro passaro1 = new Passaro("Piu Piu", "Amarelo", 1.2);
 
         System.out.println(cachorro2.getNome());
         System.out.println(cachorro2.getPeso());
@@ -27,6 +31,12 @@ public class Main {
         System.out.println("Quando falo pra meu cachorro fazer o numero 1 ele faz " + cachorro1.obediente( "xixi"));
         System.out.println("Quando falo pra meu cachorro fazer o numero 2 ele faz " + cachorro1.obediente( "coco"));
         System.out.println("Ou mando ele deitar " + cachorro1.obediente("Deitar"));
+        System.out.println("Quando dou comida pra meu gatto " + gato1.interagir( "come"));
+        System.out.println("Faço carinho no meu gato " + gato1.interagir("Feliz"));
+        System.out.println("Quando dou a bolinha pra meu gato ele " + gato1.interagir("brinca e pula corre "));
+        System.out.println( "Quando dou alpiste e falo com meu passaro ele " + passaro1.interagir( "come e canta"));
+
+
 
 
 

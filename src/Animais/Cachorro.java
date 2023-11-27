@@ -11,6 +11,7 @@ public class Cachorro {
 
     //Construtores padrão
     public Cachorro(){}
+
     private String estadoDeEspirito;
 
     //CONSTRUTORES: É O QUE CONSTROI O PROJETO COMO SE FOSSE O PEDREIRO
@@ -23,6 +24,8 @@ public class Cachorro {
         this.peso = peso;
         this.tamanhoDoRabo = tamanhoDoRabo;
     }
+
+
 
 
     //METODOS
