@@ -60,6 +60,9 @@ public class Gato {
     public void setPeso(double peso) {
         this.peso = peso;
     }
+    public void miar(){
+        System.out.println("Miau miau miau");
+    }
 
     public String interagir(String acao){
 

@@ -20,6 +20,8 @@ public class Main {
 
         cachorro1.latir();
         cachorro1.peidar();
+        passaro1.piar();
+        gato1.miar();
         cachorro1.nome();
         System.out.println("O Cachorro pegou uma " +  cachorro1.pegar() + " esse cachorro é esperto!!");
 

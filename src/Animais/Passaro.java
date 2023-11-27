@@ -48,6 +48,11 @@ public class Passaro {
     public void setPeso(double peso) {
         this.peso = peso;
     }
+    public Passaro(){}
+
+    public void piar(){
+        System.out.println("Piu Piu Piu");
+    }
 
     public String interagir(String acao){
         switch (acao){
