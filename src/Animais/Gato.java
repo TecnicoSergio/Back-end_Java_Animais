@@ -1,12 +1,10 @@
 package Animais;
 
-public class Gato {
+public class Gato extends Animal{
 
-    private String nome;
-    private String cor;
-    private int altura;
-    private double peso;
     private String estadoDeEspirito;
+
+    static int numeroDeGato;
 
     public Gato(String estadoDeEspirito) {
         this.estadoDeEspirito = estadoDeEspirito;
@@ -22,11 +20,16 @@ public class Gato {
 
     public Gato(){}
 
-    public Gato(String nome, String cor, int altura, double peso) {
+    public Gato(String nome, String cor, int altura, double peso)
+    {
+        super();
         this.nome = nome;
         this.cor = cor;
         this.altura = altura;
         this.peso = peso;
+        //super(nome, peso, cor);
+
+        numeroDeGato ++;
     }
 
     public String getNome() {
@@ -57,6 +60,14 @@ public class Gato {
         return peso;
     }
 
+    public static int getNumeroDeGato() {
+        return numeroDeGato;
+    }
+
+    public static void setNumeroDeGato(int numeroDeGato) {
+        Gato.numeroDeGato = numeroDeGato;
+    }
+
     public void setPeso(double peso) {
         this.peso = peso;
     }
@@ -76,6 +87,16 @@ public class Gato {
         return this.estadoDeEspirito;
     }
 
+    @Override
+    public String toString() {
+        return "Gato{" +
+                "nome='" + nome + '\'' +
+                ", cor='" + cor + '\'' +
+                ", altura=" + altura +
+                ", peso=" + peso +
+                ", estadoDeEspirito='" + estadoDeEspirito + '\'' +
+                '}';
+    }
 
-
+    public void soar(){};
 }

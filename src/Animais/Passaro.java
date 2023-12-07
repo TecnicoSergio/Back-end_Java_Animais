@@ -1,11 +1,11 @@
 package Animais;
 
-public class Passaro {
+public class Passaro extends Animal {
 
-    private String nome;
-    private String cor;
-    private double peso;
+
     private String estadoDeEspirito;
+
+    static int numeroDePassaro;
 
     public Passaro(String estadoDeEspirito) {
         this.estadoDeEspirito = estadoDeEspirito;
@@ -20,9 +20,15 @@ public class Passaro {
     }
 
     public Passaro(String nome, String cor, double peso) {
+        this();
         this.nome = nome;
         this.cor = cor;
         this.peso = peso;
+
+
+
+
+        numeroDePassaro ++;
     }
 
     public String getNome() {
@@ -31,6 +37,14 @@ public class Passaro {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public static int getNumeroDePassaro() {
+        return numeroDePassaro;
+    }
+
+    public static void setNumeroDePassaro(int numeroDePassaro) {
+        Passaro.numeroDePassaro = numeroDePassaro;
     }
 
     public String getCor() {
@@ -48,7 +62,9 @@ public class Passaro {
     public void setPeso(double peso) {
         this.peso = peso;
     }
-    public Passaro(){}
+    public Passaro(){
+        //super(nome, cor, peso);
+    }
 
     public void piar(){
         System.out.println("Piu Piu Piu");
@@ -61,5 +77,20 @@ public class Passaro {
 
         }
         return this.estadoDeEspirito;
+    }
+
+    @Override
+    public String toString() {
+        return "Passaro{" +
+                "nome='" + nome + '\'' +
+                ", cor='" + cor + '\'' +
+                ", peso=" + peso +
+                ", estadoDeEspirito='" + estadoDeEspirito + '\'' +
+                '}';
+    }
+
+    @Override
+    public void soar(){
+        System.out.println("miau e piu piu");
     }
 }

@@ -1,13 +1,11 @@
 package Animais;
 //A CLASSE É PARA DEFINIR ALGUMA COISA PROJETAR ALGUMA COISA SEJA ANIMAL, PLANTA, ALGUMA COISA....
-public class Cachorro {
+public class Cachorro extends Animal{
     //ATRIBUTOS
 
-    private String nome;
-    private String cor;
-    private int altura;
-    private double peso;
     private int tamanhoDoRabo;
+
+    static int numeroDeCachorro;
 
     //Construtores padrão
     public Cachorro(){}
@@ -23,10 +21,17 @@ public class Cachorro {
         this.altura = altura;
         this.peso = peso;
         this.tamanhoDoRabo = tamanhoDoRabo;
+
+        numeroDeCachorro ++;
     }
 
+    public static int getNumeroDeCachorro() {
+        return numeroDeCachorro;
+    }
 
-
+    public static void setNumeroDeCachorro(int numeroDeCachorro) {
+        Cachorro.numeroDeCachorro = numeroDeCachorro;
+    }
 
     //METODOS
 
@@ -113,6 +118,23 @@ public class Cachorro {
     public String pegar(){
 
         return "Bolinha";
+    }
+
+    @Override
+    public String toString() {
+        return "Cachorro{" +
+                "cor='" + cor + '\'' +
+                ", altura=" + altura +
+                ", peso=" + peso +
+                ", tamanhoDoRabo=" + tamanhoDoRabo +
+                ", estadoDeEspirito='" + estadoDeEspirito + '\'' +
+                ", atencaoDoCachorro='" + atencaoDoCachorro + '\'' +
+                ", fisiologicas='" + fisiologicas + '\'' +
+                '}';
+    }
+    @Override
+    public void soar(){
+        System.out.println("au aua au");
     }
 
     public String interagir(String acao){
