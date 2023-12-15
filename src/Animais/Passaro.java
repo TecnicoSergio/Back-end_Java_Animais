@@ -75,6 +75,7 @@ public class Passaro extends Animal {
             case "Alpiste":this.estadoDeEspirito = "come";break;
             case "carinho":this.estadoDeEspirito = "Canta"; break;
 
+
         }
         return this.estadoDeEspirito;
     }

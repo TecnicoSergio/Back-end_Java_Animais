@@ -2,14 +2,17 @@ import Animais.Cachorro;
 import Animais.Gato;
 import Animais.Passaro;
 import Animais.Animal;
+import lojas.Petshop;
 
 public class Main {
 
 //AGORA NO MAIN NÓS VAMOS DAR VIDA AQUILO QUE PROJETAMOS TRAREMOS A VIDA NOSSO PROJETO...
     public static void main(String[] args) {
 
-        Cachorro cachorro1 = new Cachorro();
-        System.out.println(cachorro1.getNumeroDeCachorro());
+        //Cachorro cachorro1 = new Cachorro();
+        //System.out.println(cachorro1.getNumeroDeCachorro());
+
+        Cachorro cachorro1 = new Cachorro("Rex", "branco", 10, 9.8, 6);
 
         Cachorro cachorro2 = new Cachorro("Pet", "Preto", 10, 9.8, 5);
 
@@ -49,6 +52,19 @@ public class Main {
         cachorro1.soar();
         gato1.soar();
         passaro1.soar();
+
+        Petshop petshop = new Petshop();
+        petshop.darBanho(cachorro1);
+        System.out.println(cachorro1.getEstadoDeEspirito());
+
+        petshop.darBanho(gato1);
+        System.out.println(gato1.getEstadoDeEspirito());
+
+        petshop.deixarNoHotel(passaro1);
+        System.out.println(passaro1.getEstadoDeEspirito());
+
+        //petshop.tosar(passaro1);//da erro porque o metodo tosar somente é para cachorro e gato...
+        //System.out.println(passaro1.getEstadoDeEspirito());
 
 
 
